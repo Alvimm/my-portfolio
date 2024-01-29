@@ -7,7 +7,7 @@ const NavBar = () => {
   const targetRef = useRef(null);
   const triggerRef = useRef(null);
   const [collapse, setCollapse] = useState<Collapse | null>(null);
-  const [selectedLink, setSelectedLink] = useState("#about-me");
+  const [selectedLink, setSelectedLink] = useState("#home");
 
   useEffect(() => {
     if (targetRef.current && triggerRef.current) {
@@ -21,8 +21,6 @@ const NavBar = () => {
           override: true
         }
       );
-      collapseInstance.expand();
-
       setCollapse(collapseInstance);
     }
   }, []);
@@ -37,7 +35,7 @@ const NavBar = () => {
   return (
     <nav className="w-full h-[75px] fixed top-0 shadow-lg shadow-cyan-900/50 bg-[#03001417] backdrop-blur-md z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#about-me" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
             src="/NavLogo.png"
             width={130}
@@ -54,7 +52,7 @@ const NavBar = () => {
         <div ref={targetRef} className="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#030014] md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent ">
             <li>
-              <a onClick={() => handleClick("#about-me")} href="#about-me" className={`block py-2 px-3 rounded hover:bg-cyan-900 md:hover:bg-transparent md:border-0 md:hover:text-cyan-500 md:p-0 text-lg ${selectedLink === "#about-me" ? "text-cyan-300" : "text-white"}`} aria-current="page">Home</a>
+              <a onClick={() => handleClick("#home")} href="#home" className={`block py-2 px-3 rounded hover:bg-cyan-900 md:hover:bg-transparent md:border-0 md:hover:text-cyan-500 md:p-0 text-lg ${selectedLink === "#home" ? "text-cyan-300" : "text-white"}`} aria-current="page">Home</a>
             </li>
             <li>
               <a onClick={() => handleClick("#skills")} href="#skills" className={`block py-2 px-3 rounded hover:bg-cyan-900 md:hover:bg-transparent md:border-0 md:hover:text-cyan-500 md:p-0 text-lg ${selectedLink === "#skills" ? "text-cyan-300" : "text-white"}`}>Skills</a>

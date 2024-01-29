@@ -9,7 +9,7 @@ const Footer = ()  => {
         <div className="flex flex-wrap justify-center sm:justify-between items-center mx-10">
           <div className="w-full sm:w-1/2 mb-4 sm:mb-0 flex justify-center sm:justify-start">
             <a
-              href="#about-me"
+              href="#home"
               className="h-auto w-auto flex flex-row items-center"
             >
               <Image

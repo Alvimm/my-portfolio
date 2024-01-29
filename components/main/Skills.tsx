@@ -10,7 +10,7 @@ const Skills = () => {
       style={{ transform: 'scale(0.9)' }}
     >
       <SkillText />
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="sm:flex sm:flex-row sm:justify-around sm:flex-wrap mt-4 gap-5 items-center grid grid-cols-4">
         {First_line_skills.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -21,7 +21,7 @@ const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="sm:flex sm:flex-row sm:justify-around sm:flex-wrap mt-4 gap-5 items-center grid grid-cols-3">
         {Second_line_skills.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -32,7 +32,7 @@ const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="sm:flex sm:flex-row sm:justify-around sm:flex-wrap mt-4 gap-5 items-center grid grid-cols-3">
         {Third_line_skills.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -43,7 +43,7 @@ const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center ">
+      <div className="sm:flex sm:flex-row sm:justify-around sm:flex-wrap mt-4 gap-5 items-center grid grid-cols-2">
         {Fourth_line_skills.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -54,7 +54,7 @@ const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center ">
+      <div className="sm:flex sm:flex-row sm:justify-around sm:flex-wrap mt-4 gap-5 items-center ">
         {Fifth_line_skills.map((image, index) => (
           <SkillDataProvider
             key={index}
